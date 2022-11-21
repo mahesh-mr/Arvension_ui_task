@@ -1,4 +1,7 @@
+import 'package:arvension_ui_test/view/screen/screen_detaild/detaild_screen.dart';
+import 'package:arvension_ui_test/view/screen/screen_home/coroce.dart';
 import 'package:arvension_ui_test/view/screen/screen_home/screen_home.dart';
+import 'package:arvension_ui_test/view/screen/screen_main/main_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -17,7 +20,8 @@ class MyApp extends StatelessWidget {
       
         primarySwatch: Colors.blue,
       ),
-      home: ScreenHome(),
+      debugShowCheckedModeBanner: false,
+      home: HomeScreen(),
     );
   }
 }
