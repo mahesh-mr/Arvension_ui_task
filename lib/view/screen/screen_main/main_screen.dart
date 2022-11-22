@@ -1,3 +1,4 @@
+import 'package:arvension_ui_test/view/screen/screen_home/screen_home.dart';
 import 'package:arvension_ui_test/view/screen/screen_main/widgets/screen2.dart';
 import 'package:arvension_ui_test/view/screen/screen_main/widgets/screen3.dart';
 import 'package:arvension_ui_test/view/style/style.dart';
@@ -16,8 +17,9 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   int _currentSelectedIndex = 0;
   final List<Widget> _pages = [
-    HomeScreen(),
-    Screen2(),
+  ScreenHome(),
+   // Screen2(),
+      Screen2(),
     Screen3(),
   ];
 

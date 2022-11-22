@@ -11,7 +11,7 @@ class ScreenHome extends StatelessWidget {
     return Scaffold(
       backgroundColor: white,
       body: Padding(
-        padding: const EdgeInsets.only(top: 20),
+        padding: const EdgeInsets.only(top: 0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -41,69 +41,73 @@ class ScreenHome extends StatelessWidget {
                     child: Stack(
                       children: [
                         Container(
+                            
                           alignment: Alignment.bottomCenter,
-                          child: Container(
-                              height: 350,
-                              decoration: BoxDecoration(
-                                boxShadow: const[
-                                   BoxShadow(
-        offset: Offset(3, 43),
-        spreadRadius: -6,
-        blurRadius: 7,
-        color: Color.fromARGB(255, 226, 223, 223),
-    )
-                                ],
-                                borderRadius: BorderRadius.circular(20),
-                                color: brown,
-                              ),
-                              child: Padding(
-                                padding:
-                                    const EdgeInsets.symmetric(horizontal: 20),
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.end,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    h15,
-                                    h15,
-                                    h15,
-                                    Text(
-                                      "Cappuccino",
-                                      style: mainHeadWhite,
-                                    ),
-                                    h15,
-                                    price(),
-                                    h15,
-                                    volumeText(),
-                                    h15,
-                                    Padding(
-                                      padding:
-                                          const EdgeInsets.only(bottom: 30),
-                                      child: Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
-                                        children: [
-                                          starRating(),
-                                          const CircleAvatar(
-                                            radius: 30,
-                                            backgroundColor: white,
-                                            child: Icon(
-                                              Icons.add,
-                                              color: brownshadow,
-                                            ),
-                                          )
-                                        ],
-                                      ),
-                                    ),
+                          child: Padding(
+                            padding: const EdgeInsets.only(bottom: 40),
+                            child: Container(
+                                height: 330,
+                                decoration: BoxDecoration(
+                                  boxShadow: const [
+                                    BoxShadow(
+                                      offset: Offset(3, 43),
+                                      spreadRadius: -6,
+                                      blurRadius: 7,
+                                      color: Color.fromARGB(255, 226, 223, 223),
+                                    )
                                   ],
+                                  borderRadius: BorderRadius.circular(20),
+                                  color: brown,
                                 ),
-                              )),
+                                child: Padding(
+                                  padding:
+                                      const EdgeInsets.symmetric(horizontal: 20),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.end,
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Padding(
+                                        padding: const EdgeInsets.only(top: 45),
+                                        child: Text(
+                                          "Cappuccino",
+                                          style: mainHeadWhite,
+                                        ),
+                                      ),
+                                      h15,
+                                      price(),
+                                      h15,
+                                      volumeText(),
+                                      h15,
+                                      Padding(
+                                        padding:
+                                            const EdgeInsets.only(bottom: 30),
+                                        child: Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceBetween,
+                                          children: [
+                                            starRating(),
+                                            const CircleAvatar(
+                                              radius: 30,
+                                              backgroundColor: white,
+                                              child: Icon(
+                                                Icons.add,
+                                                color: brownshadow,
+                                              ),
+                                            )
+                                          ],
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                )),
+                          ),
                         ),
                         Positioned(
                           top: 0,
                           right: 14,
                           child: ClipOval(
                             child: SizedBox.fromSize(
-                              size: const Size.fromRadius(140), // Image radius
+                              size: const Size.fromRadius(120), // Image radius
                               child: Image.asset(
                                 'assets/coff.png',
                                 fit: BoxFit.cover,
@@ -119,7 +123,7 @@ class ScreenHome extends StatelessWidget {
                   autoPlay: true,
                   disableCenter: true,
                   enlargeCenterPage: true,
-                  viewportFraction: 0.7,
+                  viewportFraction: 0.6,
                   aspectRatio: .8,
                   initialPage: 0,
                 ))
