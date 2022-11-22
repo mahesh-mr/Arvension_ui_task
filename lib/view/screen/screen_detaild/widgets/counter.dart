@@ -1,4 +1,3 @@
-
 import 'package:arvension_ui_test/view/style/style.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -43,7 +42,7 @@ class _CounterWidegetsState extends State<CounterWidegets> {
             onPressed: () {
               _decrementCounter();
             },
-            icon:  Icon(Icons.remove),
+            icon: const Icon(Icons.remove),
           ),
           Text(
             '$_counter',

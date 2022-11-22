@@ -17,19 +17,17 @@ class _MyWidgetState extends State<CustomCips> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     defaultChoiceIndex = 0;
   }
 
-  var _isSelected = false;
   @override
   Widget build(BuildContext context) {
     return Wrap(
       spacing: 8,
       children: List.generate(choicesList.length, (index) {
         return ChoiceChip(
-          labelPadding: EdgeInsets.all(2.0),
+          labelPadding: const EdgeInsets.all(2.0),
           avatar: Container(
             width: 20,
             height: 20,
@@ -52,9 +50,8 @@ class _MyWidgetState extends State<CustomCips> {
               defaultChoiceIndex = value ? index : defaultChoiceIndex;
             });
           },
-          // backgroundColor: color,
           elevation: 1,
-          padding: EdgeInsets.symmetric(horizontal: 10),
+          padding: const EdgeInsets.symmetric(horizontal: 10),
         );
       }),
     );

@@ -20,15 +20,13 @@ class _MyWidgetState extends State<CustomChoice> {
     super.initState();
     defaultChoiceIndex = 0;
   }
-
-  var _isSelected = false;
   @override
   Widget build(BuildContext context) {
     return Row(
      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: List.generate(detailList.length, (index) {
         return ChoiceChip(
-          labelPadding: EdgeInsets.symmetric(horizontal: 25,vertical: 5),
+          labelPadding:const EdgeInsets.symmetric(horizontal: 25,vertical: 5),
 
           label: Text(detailList[index].title,
               style: TextStyle(
@@ -44,7 +42,7 @@ class _MyWidgetState extends State<CustomChoice> {
           },
           // backgroundColor: color,
           elevation: 1,
-          padding: EdgeInsets.symmetric(horizontal: 10),
+          padding:const EdgeInsets.symmetric(horizontal: 10),
         );
       }),
     );

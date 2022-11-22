@@ -17,25 +17,21 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   int _currentSelectedIndex = 0;
   final List<Widget> _pages = [
-  ScreenHome(),
-   // Screen2(),
-      Screen2(),
-    Screen3(),
+    ScreenHome(),
+    const Screen2(),
+    const Screen3(),
   ];
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-    //    backgroundColor: white,
         body: _pages[_currentSelectedIndex],
         bottomNavigationBar: BottomNavigationBar(
             elevation: 0,
             type: BottomNavigationBarType.fixed,
             backgroundColor: white,
             showSelectedLabels: true,
-
-
             selectedItemColor: lightBrown,
             unselectedItemColor: grey,
             currentIndex: _currentSelectedIndex,

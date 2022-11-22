@@ -79,7 +79,7 @@ class DetailsScereen extends StatelessWidget {
               ],
             ),
 
-            //   SizedBox(height: 30,),
+      
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10),
               child: Column(
@@ -116,6 +116,7 @@ class DetailsScereen extends StatelessWidget {
     );
   }
 
+//cart=====================================
   Row cart() {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -128,7 +129,7 @@ class DetailsScereen extends StatelessWidget {
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(30),
                 ),
-                minimumSize: Size(250, 50),
+                minimumSize:const Size(250, 50),
                 backgroundColor: lightBrown),
             onPressed: () {},
             child: const Text(
@@ -139,6 +140,7 @@ class DetailsScereen extends StatelessWidget {
     );
   }
 
+//volume==============================================
   Row volume() {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -159,6 +161,7 @@ class DetailsScereen extends StatelessWidget {
       ],
     );
   }
+  //reademore=======================================================
 
   ReadMoreText about() {
     return ReadMoreText(
@@ -172,6 +175,7 @@ class DetailsScereen extends StatelessWidget {
     );
   }
 
+//price==============================================
   Row priceAndName() {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -181,9 +185,9 @@ class DetailsScereen extends StatelessWidget {
           style: mainHeadblack,
         ),
         Wrap(
-          children: [
-            const Text('\$ '),
-            const Text(
+          children:const[
+             Text('\$ '),
+             Text(
               '25.40',
               style: TextStyle(fontWeight: FontWeight.bold),
             )
@@ -192,7 +196,7 @@ class DetailsScereen extends StatelessWidget {
       ],
     );
   }
-
+//starrating================================
   Container starRating() {
     return Container(
       height: 30,
@@ -201,35 +205,18 @@ class DetailsScereen extends StatelessWidget {
           color: lightBrown, borderRadius: BorderRadius.circular(20)),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          const Icon(
+        children:const [
+           Icon(
             Icons.star,
             color: white,
             size: 20,
           ),
-          const Text(
+           Text(
             "4.3",
             style: TextStyle(color: white, fontWeight: FontWeight.bold),
           ),
         ],
       ),
-    );
-  }
-
-  Row ratingStar() {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        const Icon(
-          Icons.star,
-          color: white,
-          size: 20,
-        ),
-        const Text(
-          "4.3",
-          style: TextStyle(color: white, fontWeight: FontWeight.bold),
-        ),
-      ],
     );
   }
 }
